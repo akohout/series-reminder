@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:minWidth="@dimen/width_dialog"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_edge">
+
+    <TextView
+        android:id="@+id/seriesTitleTextView"
+
+        style="@style/SeriesTrackerTheme.Headline"
+        tools:text="The Big Bang Theory"/>
+
+    <View
+        style="@style/SeriesTrackerTheme.HorizontalLine.Orange"/>
+
+    <Switch
+        android:id="@+id/watchSwitch"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_horizontal"
+
+        android:textOn="@string/watch"
+        android:textOff="@string/wait"
+        android:thumb="@drawable/seriestracker_switch_inner_holo_light"
+        android:track="@drawable/seriestracker_switch_track_holo_light"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/decreaseSeasonImageButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:contentDescription="@string/decrease_season"
+            android:src="@drawable/ic_minus" />
+
+        <ImageView
+            android:id="@+id/increaseSeasonImageButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+
+            android:contentDescription="@string/increase_season"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/seasonCountTextView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@id/decreaseSeasonImageButton"
+            android:layout_toEndOf="@id/decreaseSeasonImageButton"
+            android:layout_toLeftOf="@id/increaseSeasonImageButton"
+            android:layout_toStartOf="@id/increaseSeasonImageButton"
+            android:layout_centerVertical="true"
+
+            android:gravity="center"
+            tools:text="Staffel 2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/decreaseEpisodeImageButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:contentDescription="@string/decrease_season"
+            android:src="@drawable/ic_minus" />
+
+        <ImageView
+            android:id="@+id/increaseEpisodeImageButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+
+            android:contentDescription="@string/increase_season"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/episodeCountTextView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@id/decreaseEpisodeImageButton"
+            android:layout_toEndOf="@id/decreaseEpisodeImageButton"
+            android:layout_toLeftOf="@id/increaseEpisodeImageButton"
+            android:layout_toStartOf="@id/increaseEpisodeImageButton"
+            android:layout_centerVertical="true"
+
+            android:gravity="center"
+            tools:text="Folge 13" />
+
+    </RelativeLayout>
+
+</LinearLayout>

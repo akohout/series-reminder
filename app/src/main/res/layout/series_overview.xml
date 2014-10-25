@@ -1,0 +1,35 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="de.alexanderkohout.seriesreminder.ui.SeriesOverviewFragment"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_edge">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="@dimen/padding_edge"
+        android:paddingRight="@dimen/padding_edge"
+        android:text="@string/your_tracked_series"
+        android:textSize="@dimen/font_size_headline" />
+
+    <ListView
+        android:id="@+id/seriesListView"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="@dimen/margin_views"
+
+        android:divider="@color/White"
+        android:dividerHeight="12dp"
+        android:paddingLeft="@dimen/padding_edge"
+        android:paddingRight="@dimen/padding_edge" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="add">Hinzufügen</string>
+    <string name="add_new_series">Eine neue Serie hinzufügen</string>
+    <string name="app_name">Serien Reminder</string>
+    <string name="decrease_episode">Folge runterzählen</string>
+    <string name="decrease_season">Staffel runterzählen</string>
+    <string name="delete">Löschen</string>
+    <string name="episode_count">Folge %1$s</string>
+    <string name="increase_episode">Folge hochzählen</string>
+    <string name="increase_season">Staffel hochzählen</string>
+    <string name="okay">Okay</string>
+    <string name="season_count">Staffel %1$s</string>
+    <string name="your_tracked_series">Deine Serien:</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="watch">watch</string>
+    <string name="wait">wait</string>
+    <string name="watching">watching</string>
+    <string name="waiting">waiting</string>
+
+</resources>

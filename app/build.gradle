@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "de.alexanderkohout.seriesreminder"
+        minSdkVersion 15
+        targetSdkVersion 20
+        versionCode 1000
+        versionName "1.0.0"
+        resConfigs "en", "de"
+        resConfigs "nodpi", "hdpi", "xhdpi", "xxhdpi"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            // The package suffix makes it possible to install a release
+            // and a debug version on the same devices
+            applicationIdSuffix ".test"
+            versionNameSuffix 'beta'
+        }
+        release {
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'uk.co.chrisjenx:calligraphy:1.2.0'
+}

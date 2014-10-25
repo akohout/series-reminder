@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="SeriesTrackerTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/SeriesTrackerTheme.ActionBar</item>
+        <item name="android:editTextBackground">@drawable/seriestracker_edit_text_holo_light</item>
+        <item name="android:textViewStyle">@style/SeriesTrackerTheme.Widget.TextView</item>
+    </style>
+
+    <style name="SeriesTrackerTheme.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/LightOrange</item>
+    </style>
+
+    <style name="SeriesTrackerTheme.Widget"/>
+
+    <style name="SeriesTrackerTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/Postface.otf</item>
+    </style>
+
+    <style name="SeriesTrackerTheme.HorizontalLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="SeriesTrackerTheme.HorizontalLine.Orange">
+        <item name="android:background">@color/Orange</item>
+    </style>
+
+    <style name="SeriesTrackerTheme.Headline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/Orange</item>
+        <item name="android:textSize">@dimen/font_size_headline</item>
+    </style>
+
+    <color name="LightOrange">#ffa282</color>
+    <color name="Orange">#ff6633</color>
+    <color name="White">#ffffff</color>
+    <color name="Grey">#999999</color>
+
+</resources>

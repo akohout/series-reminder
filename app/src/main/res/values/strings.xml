@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="add">Add</string>
+    <string name="add_new_series">Add a new series</string>
+    <string name="app_name">Series Reminder</string>
+    <string name="decrease_episode">Decrease episode</string>
+    <string name="decrease_season">Decrease season</string>
+    <string name="delete">Delete</string>
+    <string name="episode_count">Episode %1$s</string>
+    <string name="increase_episode">Increase episode</string>
+    <string name="increase_season">Increase season</string>
+    <string name="okay">Okay</string>
+    <string name="season_count">Season %1$s</string>
+    <string name="your_tracked_series">Your Series:</string>
+    <string name="cancel">Cancel</string>
+    <string name="watch">watch</string>
+    <string name="wait">wait</string>
+    <string name="watching">watching</string>
+    <string name="waiting">waiting</string>
+
+</resources>

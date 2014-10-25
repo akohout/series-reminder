@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:minWidth="@dimen/width_dialog"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_edge">
+
+    <TextView
+        style="@style/SeriesTrackerTheme.Headline"
+        android:text="@string/add_new_series"/>
+
+    <View
+        style="@style/SeriesTrackerTheme.HorizontalLine.Orange"/>
+
+    <EditText
+        android:id="@+id/seriesNameEditText"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete|textCapWords" />
+
+</LinearLayout>
