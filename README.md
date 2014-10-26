@@ -1,4 +1,4 @@
-series-tracker
+series-reminder
 ==============
 
 Track the series you're watching and which episodes you've already watched
