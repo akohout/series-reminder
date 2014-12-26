@@ -27,14 +27,12 @@ android {
             versionNameSuffix 'beta'
         }
         release {
-            runProguard true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
     compile 'uk.co.chrisjenx:calligraphy:1.2.0'
 }
