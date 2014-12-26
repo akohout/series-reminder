@@ -1,22 +1,5 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="SeriesTrackerTheme" parent="android:Theme.Holo.Light">
-        <item name="android:actionBarStyle">@style/SeriesTrackerTheme.ActionBar</item>
-        <item name="android:editTextBackground">@drawable/seriestracker_edit_text_holo_light</item>
-        <item name="android:textViewStyle">@style/SeriesTrackerTheme.Widget.TextView</item>
-    </style>
-
-    <style name="SeriesTrackerTheme.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">@color/LightOrange</item>
-    </style>
-
-    <style name="SeriesTrackerTheme.Widget"/>
-
-    <style name="SeriesTrackerTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
-        <item name="fontPath">fonts/Postface.otf</item>
-    </style>
-
     <style name="SeriesTrackerTheme.HorizontalLine">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
