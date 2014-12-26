@@ -17,19 +17,17 @@
         android:paddingLeft="@dimen/padding_edge"
         android:paddingRight="@dimen/padding_edge"
         android:text="@string/your_tracked_series"
-        android:textSize="@dimen/font_size_headline" />
+        android:textSize="@dimen/font_size_headline"/>
 
-    <ListView
-        android:id="@+id/seriesListView"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/seriesRecyclerView"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
         android:layout_marginTop="@dimen/margin_views"
-
-        android:divider="@color/White"
-        android:dividerHeight="12dp"
         android:paddingLeft="@dimen/padding_edge"
-        android:paddingRight="@dimen/padding_edge" />
+        android:paddingRight="@dimen/padding_edge"
+        android:scrollbars="none"/>
 
 </LinearLayout>
