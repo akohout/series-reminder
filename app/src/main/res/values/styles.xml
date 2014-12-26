@@ -1,19 +1,19 @@
 <resources>
 
-    <style name="SeriesTrackerTheme.HorizontalLine">
-        <item name="android:layout_width">match_parent</item>
+    <style name="HorizontalLine">
+    <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
 
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
-    <style name="SeriesTrackerTheme.HorizontalLine.Orange">
-        <item name="android:background">@color/Orange</item>
+    <style name="HorizontalLine.Orange">
+    <item name="android:background">@color/Orange</item>
     </style>
 
-    <style name="SeriesTrackerTheme.Headline">
-        <item name="android:layout_width">match_parent</item>
+    <style name="Headline">
+    <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
 
         <item name="android:ellipsize">end</item>

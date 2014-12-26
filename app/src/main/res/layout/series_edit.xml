@@ -14,11 +14,11 @@
     <TextView
         android:id="@+id/seriesTitleTextView"
 
-        style="@style/SeriesTrackerTheme.Headline"
+        style="@style/Headline"
         tools:text="The Big Bang Theory"/>
 
     <View
-        style="@style/SeriesTrackerTheme.HorizontalLine.Orange"/>
+        style="@style/HorizontalLine.Orange"/>
 
     <Switch
         android:id="@+id/watchSwitch"
@@ -48,7 +48,7 @@
             android:layout_alignParentStart="true"
 
             android:contentDescription="@string/decrease_season"
-            android:src="@drawable/ic_minus" />
+            android:src="@drawable/ic_minus"/>
 
         <ImageView
             android:id="@+id/increaseSeasonImageButton"
@@ -60,7 +60,7 @@
             android:layout_alignParentEnd="true"
 
             android:contentDescription="@string/increase_season"
-            android:src="@drawable/ic_add" />
+            android:src="@drawable/ic_add"/>
 
         <TextView
             android:id="@+id/seasonCountTextView"
@@ -75,7 +75,7 @@
             android:layout_centerVertical="true"
 
             android:gravity="center"
-            tools:text="Staffel 2" />
+            tools:text="Staffel 2"/>
 
     </RelativeLayout>
 
@@ -94,7 +94,7 @@
             android:layout_alignParentStart="true"
 
             android:contentDescription="@string/decrease_season"
-            android:src="@drawable/ic_minus" />
+            android:src="@drawable/ic_minus"/>
 
         <ImageView
             android:id="@+id/increaseEpisodeImageButton"
@@ -106,7 +106,7 @@
             android:layout_alignParentEnd="true"
 
             android:contentDescription="@string/increase_season"
-            android:src="@drawable/ic_add" />
+            android:src="@drawable/ic_add"/>
 
         <TextView
             android:id="@+id/episodeCountTextView"
@@ -121,7 +121,7 @@
             android:layout_centerVertical="true"
 
             android:gravity="center"
-            tools:text="Folge 13" />
+            tools:text="Folge 13"/>
 
     </RelativeLayout>
 
