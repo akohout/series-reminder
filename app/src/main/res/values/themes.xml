@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme. -->
-    <style name="SeriesTrackerTheme" parent="Theme.AppCompat.Light">
-        <item name="android:actionBarStyle">@style/AppBar</item>
+    <style name="SeriesTrackerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:actionBarStyle">@style/AppBar</item>
         <item name="android:editTextBackground">
             @drawable/seriestracker_edit_text_holo_light
         </item>
