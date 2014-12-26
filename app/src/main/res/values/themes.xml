@@ -10,6 +10,7 @@
 
         <item name="colorPrimary">@color/Orange</item>
         <item name="colorPrimaryDark">@color/DarkOrange</item>
+        <item name="colorAccent">@color/Grey</item>
     </style>
 
     <style name="AppBar" parent="@android:style/Widget.Holo.Light.ActionBar">
