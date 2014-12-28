@@ -7,4 +7,7 @@
     <color name="White">#ffffff</color>
 
     <color name="Grey">#999999</color>
+    <color name="LightGrey">#DCDCDC</color>
+
+    <color name="Shadow">#000</color>
 </resources>
