@@ -1,56 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-    android:background="@drawable/bg_white_border_orange"
-    android:descendantFocusability="blocksDescendants"
-    android:orientation="vertical"
-    android:padding="@dimen/padding_edge">
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    card_view:cardBackgroundColor="@color/Orange"
+    card_view:cardCornerRadius="4dp">
 
-        <TextView
-            android:id="@+id/watchStateTextView"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-
-            tools:textColor="@color/Orange"
-            android:text="●"/>
-
-        <TextView
-            android:id="@+id/seriesTitleTextView"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-
-            android:ellipsize="end"
-            tools:text="The Big Bang Theory"
-            android:textSize="@dimen/font_size_headline"/>
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/seasonCountTextView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="8dp"
-        tools:text="Season 1 - Episode 13"
-        android:textSize="@dimen/font_size_subtext"/>
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_edge">
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/watchStateTextView"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                tools:textColor="@color/Orange"
+                android:text="●"/>
+
+            <TextView
+                android:id="@+id/seriesTitleTextView"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:ellipsize="end"
+                tools:text="The Big Bang Theory"
+                android:textSize="@dimen/font_size_headline"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/seasonCountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            tools:text="Season 1 - Episode 13"
+            android:textSize="@dimen/font_size_subtext"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
