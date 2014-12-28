@@ -14,9 +14,6 @@
         style="@style/Headline"
         android:text="@string/add_new_series"/>
 
-    <View
-        style="@style/HorizontalLine.Orange"/>
-
     <EditText
         android:id="@+id/seriesNameEditText"
 
