@@ -7,7 +7,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 /**
  * The main application class.
  */
-public class SeriesTrackerApplication extends Application {
+public class SeriesReminderApplication extends Application {
 
     @Override
     public void onCreate() {

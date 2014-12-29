@@ -1,5 +1,5 @@
 <menu
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="de.alexanderkohout.seriesreminder.ui.SeriesOverviewFragment">
+    tools:context="de.alexanderkohout.seriesreminder.ui.OverviewFragment">
 
 </menu>

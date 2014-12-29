@@ -21,7 +21,7 @@ import de.alexanderkohout.seriesreminder.data.Series;
 /**
  * A fragment to edit series data.
  */
-public class SeriesEditDialogFragment extends DialogFragment {
+public class EditDialogFragment extends DialogFragment {
 
     /**
      * The identifier of this fragment.
@@ -41,21 +41,21 @@ public class SeriesEditDialogFragment extends DialogFragment {
     /**
      * Empty constructor for Android.
      */
-    public SeriesEditDialogFragment() {
+    public EditDialogFragment() {
         setStyle(STYLE_NO_TITLE, 0);
     }
 
     /**
      * Create a new dialog to edit a series.
      *
-     * @param id The identifier of the series to be edited.
+     * @param id             The identifier of the series to be edited.
      * @param seriesControls A handler that will manipulate the data for this
      *                       fragment.
      * @return A new dialog to edit a series.
      */
-    public static SeriesEditDialogFragment newInstance(final long id,
-                                                       final SeriesControls seriesControls) {
-        final SeriesEditDialogFragment f = new SeriesEditDialogFragment();
+    public static EditDialogFragment newInstance(final long id,
+                                                 final SeriesControls seriesControls) {
+        final EditDialogFragment f = new EditDialogFragment();
 
         f.seriesControls = seriesControls;
 
@@ -89,7 +89,7 @@ public class SeriesEditDialogFragment extends DialogFragment {
 
         // Inflate custom layout for builder
         final LayoutInflater inflater = getActivity().getLayoutInflater();
-        final View layoutView = inflater.inflate(R.layout.series_edit, null);
+        final View layoutView = inflater.inflate(R.layout.edit, null);
 
         final TextView seriesTitleTextView = (TextView) layoutView
                 .findViewById(R.id.seriesTitleTextView);

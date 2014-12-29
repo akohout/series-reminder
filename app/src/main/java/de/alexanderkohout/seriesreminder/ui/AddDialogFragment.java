@@ -16,7 +16,7 @@ import de.alexanderkohout.seriesreminder.SeriesControls;
 /**
  * A fragment for creating a new series entry.
  */
-public class SeriesAddDialogFragment extends DialogFragment {
+public class AddDialogFragment extends DialogFragment {
 
     /**
      * The identifier of this fragment.
@@ -32,7 +32,7 @@ public class SeriesAddDialogFragment extends DialogFragment {
     /**
      * Create a new dialog with no title.
      */
-    public SeriesAddDialogFragment() {
+    public AddDialogFragment() {
         setStyle(STYLE_NO_TITLE, 0);
     }
 
@@ -44,8 +44,8 @@ public class SeriesAddDialogFragment extends DialogFragment {
      * @return Returns a new instance with the set {@link de.alexanderkohout
      * .seriesreminder.SeriesControls} handler.
      */
-    public static SeriesAddDialogFragment newInstance(final SeriesControls seriesControls) {
-        SeriesAddDialogFragment f = new SeriesAddDialogFragment();
+    public static AddDialogFragment newInstance(final SeriesControls seriesControls) {
+        AddDialogFragment f = new AddDialogFragment();
         f.seriesControls = seriesControls;
         return f;
     }
@@ -56,9 +56,9 @@ public class SeriesAddDialogFragment extends DialogFragment {
 
         // Inflate custom layout for the dialog
         final LayoutInflater inflater = getActivity().getLayoutInflater();
-        final View layoutView = inflater.inflate(R.layout.series_add, null);
+        final View layoutView = inflater.inflate(R.layout.add, null);
 
-        builder .setView(layoutView)
+        builder.setView(layoutView)
                 .setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         final EditText seriesNameEditText = (EditText)

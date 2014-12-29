@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Database manager class.
- *
+ * <p/>
  * This class will create, upgrade or downgrade a database based on the app
  * version.
  */
@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * The version of the Database.
-     *
+     * <p/>
      * If you change the database schema, you must increment the database version.
      */
     public static final int DATABASE_VERSION = 1;
@@ -35,30 +35,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * Create the database.
-     *
+     * <p/>
      * Is automatically called when the database does not exist.
      *
      * @param db The database reference that is used to execute the SQL
      *           create statement on.
      */
     public void onCreate(SQLiteDatabase db) {
-        final String create = "CREATE TABLE " + SeriesTrackerContract.SeriesEntry.TABLE_NAME + " (" +
-                SeriesTrackerContract.SeriesEntry._ID + " INTEGER PRIMARY KEY," +
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE + " TEXT," +
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_SEASON + " INTEGER," +
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_EPISODE + " INTEGER," +
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING + " INTEGER" +
+        final String create = "CREATE TABLE " + SeriesReminderContract.SeriesEntry.TABLE_NAME + " (" +
+                SeriesReminderContract.SeriesEntry._ID + " INTEGER PRIMARY KEY," +
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE + " TEXT," +
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_SEASON + " INTEGER," +
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_EPISODE + " INTEGER," +
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING + " INTEGER" +
                 " )";
         db.execSQL(create);
     }
 
     /**
      * Upgrades the database.
-     *
+     * <p/>
      * Is automatically called when the database exists,
      * but in a previous version.
      *
-     * @param db The database reference.
+     * @param db         The database reference.
      * @param oldVersion The currently installed version.
      * @param newVersion The new version that is about to be updated to.
      */
@@ -68,11 +68,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * Downgrades the database.
-     *
+     * <p/>
      * Is automatically called when the database exists,
      * but in a newer version than required.
      *
-     * @param db The database reference.
+     * @param db         The database reference.
      * @param oldVersion The currently installed version.
      * @param newVersion The new version that is about to be updated to.
      */

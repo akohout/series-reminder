@@ -10,10 +10,10 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * The main activity of this application.
- *
+ * <p/>
  * This activity is responsible for managing the set of series.
  */
-public class SeriesActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -23,14 +23,14 @@ public class SeriesActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.series);
+        setContentView(R.layout.main);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.appToolbar);
         setSupportActionBar(toolbar);
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .add(R.id.container, SeriesOverviewFragment.newInstance())
+                    .add(R.id.container, OverviewFragment.newInstance())
                     .commit();
         }
     }

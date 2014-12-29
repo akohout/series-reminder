@@ -7,10 +7,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/SeriesTrackerTheme"
-        android:name=".SeriesTrackerApplication">
+        android:name=".SeriesReminderApplication">
 
         <activity
-            android:name=".ui.SeriesActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/your_tracked_series">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

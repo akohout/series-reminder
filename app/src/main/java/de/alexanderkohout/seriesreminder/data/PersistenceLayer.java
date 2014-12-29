@@ -54,22 +54,22 @@ public class PersistenceLayer {
      */
     private ArrayList<Series> findSeriesByWatchingState(final String watchingState) {
         final String[] projection = {
-                SeriesTrackerContract.SeriesEntry._ID,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_EPISODE,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_SEASON,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING
+                SeriesReminderContract.SeriesEntry._ID,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_EPISODE,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_SEASON,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING
         };
 
         final String sortOrder =
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING + " DESC," +
-                        SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE + " ASC";
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING + " DESC," +
+                        SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE + " ASC";
 
-        String selection = SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING + " = ?";
+        String selection = SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING + " = ?";
         String[] selectionArgs = {watchingState};
 
         final Cursor cursor = database.query(
-                SeriesTrackerContract.SeriesEntry.TABLE_NAME,
+                SeriesReminderContract.SeriesEntry.TABLE_NAME,
                 projection, selection, selectionArgs, null, null, null
         );
 
@@ -78,19 +78,19 @@ public class PersistenceLayer {
             final Series series = new Series();
 
             series.id = cursor.getLong(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry._ID)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry._ID)
             );
             series.name = cursor.getString(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE)
             );
             series.season = cursor.getInt(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_SEASON)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_SEASON)
             );
             series.episode = cursor.getInt(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_EPISODE)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_EPISODE)
             );
             series.watching = cursor.getInt(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING)
             ) == 1;
 
             activeSeries.add(series);
@@ -110,37 +110,37 @@ public class PersistenceLayer {
      */
     public Series findSeries(final long id) {
         final String[] projection = {
-                SeriesTrackerContract.SeriesEntry._ID,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_EPISODE,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_SEASON,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE,
-                SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING
+                SeriesReminderContract.SeriesEntry._ID,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_EPISODE,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_SEASON,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE,
+                SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING
         };
 
-        String selection = SeriesTrackerContract.SeriesEntry._ID + " = ?";
+        String selection = SeriesReminderContract.SeriesEntry._ID + " = ?";
         String[] selectionArgs = {String.valueOf(id)};
 
         final Cursor cursor = database.query(
-                SeriesTrackerContract.SeriesEntry.TABLE_NAME,
+                SeriesReminderContract.SeriesEntry.TABLE_NAME,
                 projection, selection, selectionArgs, null, null, null
         );
 
         final Series series = new Series();
         while (cursor.moveToNext()) {
             series.id = cursor.getLong(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry._ID)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry._ID)
             );
             series.name = cursor.getString(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE)
             );
             series.season = cursor.getInt(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_SEASON)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_SEASON)
             );
             series.episode = cursor.getInt(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_EPISODE)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_EPISODE)
             );
             series.watching = cursor.getInt(
-                    cursor.getColumnIndexOrThrow(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING)
+                    cursor.getColumnIndexOrThrow(SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING)
             ) == 1;
         }
 
@@ -163,13 +163,13 @@ public class PersistenceLayer {
         series.watching = true;
 
         ContentValues values = new ContentValues();
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE, series.name);
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_SEASON, series.season);
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_EPISODE, series.episode);
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING, series.watching ? 1 : 0);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE, series.name);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_SEASON, series.season);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_EPISODE, series.episode);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING, series.watching ? 1 : 0);
 
         series.id = database.insert(
-                SeriesTrackerContract.SeriesEntry.TABLE_NAME, null, values);
+                SeriesReminderContract.SeriesEntry.TABLE_NAME, null, values);
 
         return series;
     }
@@ -182,16 +182,16 @@ public class PersistenceLayer {
      */
     public void updateSeries(final Series series) {
         ContentValues values = new ContentValues();
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_TITLE, series.name);
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_SEASON, series.season);
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_EPISODE, series.episode);
-        values.put(SeriesTrackerContract.SeriesEntry.COLUMN_NAME_WATCHING, series.watching ? 1 : 0);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_TITLE, series.name);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_SEASON, series.season);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_EPISODE, series.episode);
+        values.put(SeriesReminderContract.SeriesEntry.COLUMN_NAME_WATCHING, series.watching ? 1 : 0);
 
-        String selection = SeriesTrackerContract.SeriesEntry._ID + " = ?";
+        String selection = SeriesReminderContract.SeriesEntry._ID + " = ?";
         String[] selectionArgs = {String.valueOf(series.id)};
 
         database.update(
-                SeriesTrackerContract.SeriesEntry.TABLE_NAME,
+                SeriesReminderContract.SeriesEntry.TABLE_NAME,
                 values, selection, selectionArgs);
     }
 
@@ -201,11 +201,11 @@ public class PersistenceLayer {
      * @param series The series to be deleted.
      */
     public void deleteSeries(final Series series) {
-        String selection = SeriesTrackerContract.SeriesEntry._ID + " = ?";
+        String selection = SeriesReminderContract.SeriesEntry._ID + " = ?";
         String[] selectionArgs = {String.valueOf(series.id)};
 
         database.delete(
-                SeriesTrackerContract.SeriesEntry.TABLE_NAME,
+                SeriesReminderContract.SeriesEntry.TABLE_NAME,
                 selection, selectionArgs);
     }
 }

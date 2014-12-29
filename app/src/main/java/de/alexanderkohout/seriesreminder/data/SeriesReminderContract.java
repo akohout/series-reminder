@@ -5,9 +5,9 @@ import android.provider.BaseColumns;
 /**
  * The contract defines some conventions for the series database table.
  */
-public class SeriesTrackerContract {
+public class SeriesReminderContract {
 
-    public SeriesTrackerContract() {
+    public SeriesReminderContract() {
     }
 
     public static abstract class SeriesEntry implements BaseColumns {

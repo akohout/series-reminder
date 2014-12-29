@@ -18,26 +18,26 @@ import de.alexanderkohout.seriesreminder.data.DatabaseHelper;
 import de.alexanderkohout.seriesreminder.data.PersistenceLayer;
 import de.alexanderkohout.seriesreminder.data.Series;
 
-public class SeriesOverviewFragment extends Fragment implements
+public class OverviewFragment extends Fragment implements
         SeriesAdapter.OnItemClickListener,
         SeriesControls {
 
     private PersistenceLayer persistenceLayer;
     private SeriesAdapter adapter;
 
-    public SeriesOverviewFragment() {
+    public OverviewFragment() {
         setHasOptionsMenu(true);
     }
 
-    public static SeriesOverviewFragment newInstance() {
-        return new SeriesOverviewFragment();
+    public static OverviewFragment newInstance() {
+        return new OverviewFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return getActivity().getLayoutInflater().inflate(
-                R.layout.series_overview, container, false
+                R.layout.overview, container, false
         );
     }
 
@@ -79,9 +79,9 @@ public class SeriesOverviewFragment extends Fragment implements
 
     @Override
     public void onItemClicked(Series series) {
-        SeriesEditDialogFragment
+        EditDialogFragment
                 .newInstance(series.id, this)
-                .show(getFragmentManager(), SeriesEditDialogFragment.TAG);
+                .show(getFragmentManager(), EditDialogFragment.TAG);
     }
 
     @Override
@@ -114,9 +114,9 @@ public class SeriesOverviewFragment extends Fragment implements
 
         @Override
         public void onClick(View v) {
-            SeriesAddDialogFragment
+            AddDialogFragment
                     .newInstance(seriesControls)
-                    .show(fragmentManager, SeriesAddDialogFragment.TAG);
+                    .show(fragmentManager, AddDialogFragment.TAG);
         }
     }
 }

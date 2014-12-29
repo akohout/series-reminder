@@ -61,7 +61,7 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
     @Override
     public SeriesViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         final View view = LayoutInflater.from(context).inflate(
-                R.layout.series_overview_entry, viewGroup, false
+                R.layout.overview_entry, viewGroup, false
         );
         return new SeriesViewHolder(view, onItemClickListener);
     }
