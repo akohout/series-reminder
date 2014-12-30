@@ -1,11 +1,11 @@
-series-tracker
+series-reminder
 ==============
 
 Track the series you're watching and which episodes you've already watched
 with an Android app.
 
 This is the source code to the Series Tracker app you can find in the
-[Google Play Store](https://play.google.com/store/apps/details?id=seriesreminder "Google Play Store Link").
+[Google Play Store](https://play.google.com/store/apps/details?id=de.alexanderkohout.seriesreminder "Google Play Store Link").
 
 ## Contribution
 
